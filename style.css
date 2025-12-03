@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* Prevent scrolling if not needed */
+}
+
+/* Base styles for layers */
+.bg-layer,
+.fg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Background Layer - Fills the screen */
+.bg-layer {
+    z-index: 1;
+    background-size: cover;
+    background-image: url('BG/MOBILE.jpg');
+}
+
+/* Foreground Layer - Fits the screen */
+.fg-layer {
+    z-index: 2;
+    background-size: auto 100%;
+    background-image: url('FG/MOBILE.png');
+}
+
+/* Tablet Styles (min-width: 768px) */
+@media (min-width: 768px) {
+    .bg-layer {
+        background-image: url('BG/TABLET.jpg');
+    }
+
+    .fg-layer {
+        background-image: url('FG/TABLET.png');
+    }
+}
+
+/* Laptop/Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .bg-layer {
+        background-image: url('BG/LAPTOP.jpg');
+    }
+
+    .fg-layer {
+        background-image: url('FG/LAPTOP.png');
+    }
+}

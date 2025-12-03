@@ -1,0 +1,100 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  /* Mobile background by default */
+  background-image: url('/MOBILE.png');
+}
+
+/* Tablet Styles (min-width: 768px) */
+@media (min-width: 768px) {
+  .backgroundImage {
+    background-image: url('/TABLET.png');
+  }
+}
+
+/* Laptop/Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .backgroundImage {
+    background-image: url('/LAPTOP.png');
+  }
+}
+
+.countdownWrapper {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  /* Position below the date area - adjust these percentages based on your image layout */
+  /* The countdown will be positioned below where the date appears in the background image */
+  margin-top: 50vh; /* Default: adjust this value to position below the date */
+}
+
+/* Responsive positioning adjustments for different screen sizes */
+/* Adjust these values to match where the date appears in each background image */
+@media (max-width: 480px) {
+  .countdownWrapper {
+    margin-top: 45vh; /* Mobile: adjust to position below date in MOBILE.png */
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 767px) {
+  .countdownWrapper {
+    margin-top: 25vh; /* Small tablets */
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .countdownWrapper {
+    margin-top: 25vh; /* Tablet: adjust to position below date in TABLET.png */
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .countdownWrapper {
+    margin-top: 30vh; /* Laptop: adjust to position below date in LAPTOP.png */
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .countdownWrapper {
+    margin-top: 30vh; /* Large screens */
+    padding: 3rem 2rem;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 10;
+}

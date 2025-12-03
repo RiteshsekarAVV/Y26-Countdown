@@ -1,0 +1,17 @@
+services:
+  # Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yugam-site
+    ports:
+      - "5133:80"
+    networks:
+      - yugam-date-launch-network
+    restart: unless-stopped
+
+networks:
+  yugam-date-launch-network:
+    driver: bridge
+

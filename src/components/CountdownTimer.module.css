@@ -1,0 +1,98 @@
+.countdownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.countdownNumbers {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.number {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #ea4736 0%, #f1a837 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+}
+
+.label {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  background: linear-gradient(135deg, #ea4736 0%, #f1a837 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: none;
+}
+
+.separator {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #ea4736 0%, #f1a837 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.message {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  background: linear-gradient(135deg, #ea4736 0%, #f1a837 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: none;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10;
+}
+
+.message span {
+  background: linear-gradient(135deg, #ea4736 0%, #f1a837 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .countdownNumbers {
+    gap: 0.5rem;
+  }
+  
+  .separator {
+    font-size: 1.5rem;
+  }
+}
+
